@@ -23,4 +23,14 @@ public class InvoiceGenerator {
             totalFare = 5.0;
         return totalFare;
     }
+
+    public double calculateTotalFare(Ride[] rides) 
+    {
+        double totalFare = 0.0;
+        for (Ride ride : rides) 
+        {
+            totalFare += this.calculateTotalFare(ride.distance, ride.time);
+        }
+        return totalFare;
+    }
 }
