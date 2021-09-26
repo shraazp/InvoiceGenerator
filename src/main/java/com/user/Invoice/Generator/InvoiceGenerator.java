@@ -18,8 +18,9 @@ public class InvoiceGenerator {
      */
     public double calculateTotalFare(double distance, double time)
     {
-        double totalFare;
-        totalFare = (10 * distance) + (time * 1);
+        double totalFare = (10 * distance) + (time * 1);
+        if(totalFare <= 5)
+            totalFare = 5.0;
         return totalFare;
     }
 }
